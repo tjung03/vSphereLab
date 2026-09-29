@@ -2,6 +2,8 @@
 
 ESXi 호스트, vCenter, 공유 iSCSI 스토리지와 클러스터의 관계를 설명하고 VM 관리·이동·가용성 기능의 확인 지점을 정리한 실습 문서입니다. GUI 작업을 위한 구성 시나리오이며 자동 배포 코드나 현재 운영 중인 클러스터의 검증 결과는 포함하지 않습니다.
 
+![vCenter, 두 호스트의 클러스터와 공유 iSCSI datastore의 논리 관계](docs/images/vsphere-topology.svg)
+
 ## 구성 시나리오
 
 | 영역 | 구성 요소와 역할 | 상세 |

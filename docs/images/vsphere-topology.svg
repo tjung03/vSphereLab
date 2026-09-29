@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1180" height="505" viewBox="0 0 1180 505" role="img" aria-labelledby="title desc">
+  <title id="title">vSphere 관리와 공유 스토리지의 논리 관계</title>
+  <desc id="desc">vCenter가 두 ESXi 호스트의 클러스터를 관리하고, 두 호스트가 NAS의 동일한 iSCSI LUN을 datastore로 확인한다. 세 번째 ESXi 호스트는 이 클러스터 밖의 예시 호스트다.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1"><stop stop-color="#0f172a"/><stop offset="1" stop-color="#172554"/></linearGradient>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0 0 L10 5 L0 10 Z" fill="#93c5fd"/></marker>
+    <style>
+      .title{font:700 27px system-ui,sans-serif;fill:#f8fafc}.sub{font:15px system-ui,sans-serif;fill:#cbd5e1}
+      .name{font:700 20px system-ui,sans-serif;fill:#f8fafc}.detail{font:15px system-ui,sans-serif;fill:#cbd5e1}
+      .vcenter{fill:#1e3a8a;stroke:#93c5fd;stroke-width:2}.host{fill:#1e293b;stroke:#60a5fa;stroke-width:2}.nas{fill:#064e3b;stroke:#6ee7b7;stroke-width:2}.outside{fill:#1e293b;stroke:#64748b;stroke-width:2}
+      .cluster{fill:#172554;stroke:#818cf8;stroke-width:2;stroke-dasharray:7 6}.line{fill:none;stroke:#93c5fd;stroke-width:2.5;marker-end:url(#arrow)}.storage{fill:none;stroke:#6ee7b7;stroke-width:2.5;marker-end:url(#arrow)}.tag{font:14px system-ui,sans-serif;fill:#bfdbfe}
+    </style>
+  </defs>
+  <rect width="1180" height="505" rx="22" fill="url(#bg)"/>
+  <text x="42" y="51" class="title">vSphere · Management and shared storage</text>
+  <text x="42" y="78" class="sub">Conceptual scenario · host registration, datastore access and migration results are not shown</text>
+  <rect x="51" y="165" width="242" height="105" rx="16" class="vcenter"/>
+  <text x="75" y="207" class="name">vCenter</text>
+  <text x="75" y="237" class="detail">Cluster management</text>
+  <rect x="364" y="117" width="526" height="273" rx="20" class="cluster"/>
+  <text x="389" y="153" class="name">Cluster · two hosts</text>
+  <rect x="393" y="193" width="214" height="112" rx="14" class="host"/>
+  <text x="414" y="235" class="name">ESXi 01</text>
+  <text x="414" y="264" class="detail">VM · VMkernel</text>
+  <rect x="645" y="193" width="214" height="112" rx="14" class="host"/>
+  <text x="666" y="235" class="name">ESXi 02</text>
+  <text x="666" y="264" class="detail">VM · VMkernel</text>
+  <path d="M293 218 H354" class="line"/>
+  <text x="306" y="202" class="tag">manage</text>
+  <path d="M607 250 H635" class="line"/>
+  <text x="626" y="183" text-anchor="middle" class="tag">vMotion*</text>
+  <rect x="938" y="165" width="194" height="105" rx="16" class="outside"/>
+  <text x="958" y="207" class="name">ESXi 03</text>
+  <text x="958" y="237" class="detail">Outside this cluster</text>
+  <rect x="393" y="402" width="466" height="60" rx="14" class="nas"/>
+  <text x="419" y="440" class="name">NAS · iSCSI LUN → shared datastore</text>
+  <path d="M500 402 V315" class="storage"/>
+  <path d="M751 402 V315" class="storage"/>
+  <text x="54" y="492" class="sub">* Check VMkernel network, version, license and shared storage requirements before VM migration.</text>
+</svg>
