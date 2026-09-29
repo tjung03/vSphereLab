@@ -27,7 +27,7 @@
   <text x="666" y="264" class="detail">VM · VMkernel</text>
   <path d="M293 218 H354" class="line"/>
   <text x="306" y="202" class="tag">manage</text>
-  <path d="M607 250 H635" class="line"/>
+  <path d="M607 250 H645" fill="none" stroke="#93c5fd" stroke-width="2.5"/>
   <text x="626" y="183" text-anchor="middle" class="tag">vMotion*</text>
   <rect x="938" y="165" width="194" height="105" rx="16" class="outside"/>
   <text x="958" y="207" class="name">ESXi 03</text>
